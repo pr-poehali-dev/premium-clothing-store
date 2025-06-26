@@ -1,4 +1,5 @@
 import ProductCard from "./ProductCard";
+import { Button } from "@/components/ui/button";
 
 const FeaturedProducts = () => {
   const products = [
