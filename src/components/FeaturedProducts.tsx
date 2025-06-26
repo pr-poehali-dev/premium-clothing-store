@@ -1,5 +1,6 @@
 import ProductCard from "./ProductCard";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const FeaturedProducts = () => {
   const products = [
@@ -63,13 +64,15 @@ const FeaturedProducts = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-2 border-primary brutalist-shadow px-8 py-4 text-lg font-montserrat font-medium"
-          >
-            Смотреть все модели
-          </Button>
+          <Link to="/catalog">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-primary brutalist-shadow px-8 py-4 text-lg font-montserrat font-medium"
+            >
+              Смотреть все модели
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

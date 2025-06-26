@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -24,22 +25,26 @@ const HeroSection = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-          <Button
-            size="lg"
-            className="bg-accent hover:bg-accent/90 text-accent-foreground brutalist-shadow-accent px-8 py-4 text-lg font-montserrat font-medium"
-          >
-            Исследовать коллекцию
-            <Icon name="ArrowRight" size={20} className="ml-2" />
-          </Button>
+          <Link to="/catalog">
+            <Button
+              size="lg"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground brutalist-shadow-accent px-8 py-4 text-lg font-montserrat font-medium"
+            >
+              Исследовать коллекцию
+              <Icon name="ArrowRight" size={20} className="ml-2" />
+            </Button>
+          </Link>
 
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-2 border-primary brutalist-shadow px-8 py-4 text-lg font-montserrat font-medium"
-          >
-            Смотреть лукбук
-            <Icon name="Play" size={18} className="ml-2" />
-          </Button>
+          <Link to="/lookbook">
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-2 border-primary brutalist-shadow px-8 py-4 text-lg font-montserrat font-medium"
+            >
+              Смотреть лукбук
+              <Icon name="Play" size={18} className="ml-2" />
+            </Button>
+          </Link>
         </div>
 
         {/* Floating Elements */}

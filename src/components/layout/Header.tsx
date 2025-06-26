@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isDark, setIsDark] = useState(false);
@@ -29,35 +30,35 @@ const Header = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-playfair text-2xl font-bold">
+          <Link to="/" className="font-playfair text-2xl font-bold">
             MINIMAL WARDROBE
-          </div>
+          </Link>
 
           <nav className="hidden md:flex items-center space-x-8 font-montserrat">
-            <a
-              href="#"
+            <Link
+              to="/catalog"
               className="text-foreground hover:text-accent transition-colors"
             >
               Каталог
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/collections"
               className="text-foreground hover:text-accent transition-colors"
             >
               Коллекции
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/about"
               className="text-foreground hover:text-accent transition-colors"
             >
               О нас
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/blog"
               className="text-foreground hover:text-accent transition-colors"
             >
               Блог
-            </a>
+            </Link>
           </nav>
 
           <div className="flex items-center space-x-4">
@@ -67,15 +68,19 @@ const Header = () => {
             <Button variant="ghost" size="icon">
               <Icon name="Search" size={20} />
             </Button>
-            <Button variant="ghost" size="icon">
-              <Icon name="User" size={20} />
-            </Button>
-            <Button variant="ghost" size="icon" className="relative">
-              <Icon name="ShoppingBag" size={20} />
-              <span className="absolute -top-1 -right-1 bg-accent text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                2
-              </span>
-            </Button>
+            <Link to="/profile">
+              <Button variant="ghost" size="icon">
+                <Icon name="User" size={20} />
+              </Button>
+            </Link>
+            <Link to="/cart">
+              <Button variant="ghost" size="icon" className="relative">
+                <Icon name="ShoppingBag" size={20} />
+                <span className="absolute -top-1 -right-1 bg-accent text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  2
+                </span>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

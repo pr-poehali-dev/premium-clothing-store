@@ -1,5 +1,6 @@
 import Icon from "@/components/ui/icon";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -47,24 +48,36 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 font-montserrat text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-accent transition-colors">
+                <Link
+                  to="/catalog"
+                  className="hover:text-accent transition-colors"
+                >
                   Каталог
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-accent transition-colors">
+                <Link
+                  to="/collections"
+                  className="hover:text-accent transition-colors"
+                >
                   Коллекции
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-accent transition-colors">
+                <Link
+                  to="/size-guide"
+                  className="hover:text-accent transition-colors"
+                >
                   Размерная сетка
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-accent transition-colors">
+                <Link
+                  to="/shipping"
+                  className="hover:text-accent transition-colors"
+                >
                   Доставка
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -76,24 +89,33 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 font-montserrat text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-accent transition-colors">
+                <Link
+                  to="/contact"
+                  className="hover:text-accent transition-colors"
+                >
                   Контакты
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-accent transition-colors">
+                <Link
+                  to="/returns"
+                  className="hover:text-accent transition-colors"
+                >
                   Возврат
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-accent transition-colors">
+                <Link to="/faq" className="hover:text-accent transition-colors">
                   FAQ
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-accent transition-colors">
+                <Link
+                  to="/about"
+                  className="hover:text-accent transition-colors"
+                >
                   Уход за изделиями
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -127,12 +149,12 @@ const Footer = () => {
         <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground font-montserrat">
           <p>© 2024 Minimal Wardrobe. Все права защищены.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-accent transition-colors">
+            <Link to="/privacy" className="hover:text-accent transition-colors">
               Политика конфиденциальности
-            </a>
-            <a href="#" className="hover:text-accent transition-colors">
+            </Link>
+            <Link to="/terms" className="hover:text-accent transition-colors">
               Условия использования
-            </a>
+            </Link>
           </div>
         </div>
       </div>
